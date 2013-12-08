@@ -8,7 +8,7 @@
 #include <WinAPI.au3>
 #include <String.au3>
 #include <Array.au3>
-; hi tim
+; hi tim check ob ork
 ; Externe
 #include <Externe\OpenGL\opengl.au3>
 #include <Externe\AutoItObject.au3>
