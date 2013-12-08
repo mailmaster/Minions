@@ -8,7 +8,7 @@
 #include <WinAPI.au3>
 #include <String.au3>
 #include <Array.au3>
-
+; hi tim
 ; Externe
 #include <Externe\OpenGL\opengl.au3>
 #include <Externe\AutoItObject.au3>
@@ -66,7 +66,7 @@ Func _Main()
 	$iTimeDiff = -1
 	$iTimeStep = 0
 
-	; Zusätzliche Funktionen
+	; Zusï¿½tzliche Funktionen
 	_Physik_Start()
 	_Bewegung_Start()
 
@@ -74,7 +74,7 @@ Func _Main()
 	While $iActive
 		; Timer-Start
 		; -----------
-		; Timer löschen
+		; Timer lï¿½schen
 		$iTimer = -1
 
 		; Timer setzen
@@ -93,14 +93,14 @@ Func _Main()
 
 		; Timer-Ende
 		; -----------
-		; Säubern
+		; Sï¿½ubern
 		$iTimeDiff = -1
 		$iTimeStep = 0
 
 		; Dauer ausrechnen
 		$iTimeDiff = TimerDiff($iTimer)
 
-		; Next Timestep ausrechnen - Sorgt dafür das es auf jeden Pc gleich schnell abläuft
+		; Next Timestep ausrechnen - Sorgt dafï¿½r das es auf jeden Pc gleich schnell ablï¿½uft
 		$iTimeStep = ($iTimeDiff/1000)
 
 		; Timestep anzeigen lassen - Nur Windowed
@@ -108,7 +108,7 @@ Func _Main()
 	WEnd
 EndFunc
 
-; Startet alles und prüft auf Fehler
+; Startet alles und prï¿½ft auf Fehler
 Func _Start()
 	; Ordnerstruktur erstellen
 	_Ordner_Create()
@@ -146,7 +146,7 @@ EndFunc
 
 ; Beendet alles
 Func _Ende()
-	; Zusätzliche Funktionen
+	; Zusï¿½tzliche Funktionen
 	_Physik_Ende()
 
 	; Einstellungen speichern
@@ -226,7 +226,7 @@ Func _CreateGlWindow($sTitle, $iWidth, $iHeight, ByRef $aiBits, $iFullscreenFlag
 	glfwSetMouseWheelCallback("_Press_MouseWheelCallback")
 EndFunc
 
-; Initialisiert das geöffnete Fenster
+; Initialisiert das geï¿½ffnete Fenster
 Func _InitGl()
 	glShadeModel($GL_SMOOTH)
 	glClearColor(0, 0, 0, 0)
@@ -248,7 +248,7 @@ Func _InitGl()
 	Return True
 EndFunc
 
-; Bearbeitet Änderungen am Fenster
+; Bearbeitet ï¿½nderungen am Fenster
 Func _ReSizeGlScene($iWidth, $iHeight)
 	If $iHeight = 0 Then
 		$iHeight = 1
@@ -264,10 +264,10 @@ Func _ReSizeGlScene($iWidth, $iHeight)
 	glLoadIdentity()
 EndFunc
 
-; Setzt das Fenster in den Vollbildmodus und zurück
+; Setzt das Fenster in den Vollbildmodus und zurï¿½ck
 Func _SetGlFullscreen($iFullscreenFlag = True)
 	; Andere Variablen
-	Dim $aiBits[6] = [8, 8, 8, 0, 8, 0] ; Rot, Grün, Blau, Alpha, Depth, Stencil
+	Dim $aiBits[6] = [8, 8, 8, 0, 8, 0] ; Rot, Grï¿½n, Blau, Alpha, Depth, Stencil
 	Local $iWidth = 0, $iHeight = 0, $sAufloesung = -1, $aAufloesung = -1
 
 	If $iFullscreenFlag Then
@@ -311,7 +311,7 @@ Func _KillGlWindow()
 	glfwSetWindowSizeCallback("")
 	glfwSetWindowCloseCallback("")
 
-	; Fenster schließen
+	; Fenster schlieï¿½en
 	glfwCloseWindow()
 EndFunc
 
